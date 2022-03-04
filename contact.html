@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The Bistro Cafe</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    #wrapper {
+      width: 100%;
+    }
+
+    .contact-page-container {
+      background-color: #ebfaff;
+      display: flex;
+      justify-content: center;
+    }
+
+    .contact-form-box {
+      padding: 16px 36px;
+      background-color: #0a6778;
+      margin: 20px 14px;
+      border-radius: 9px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      width: 380px;
+    }
+
+    @media (min-width:  800px) {
+      .contact-form-box {
+        width: 600px;
+      }
+
+      #wrapper {
+        width: 80%;
+      }
+
+    }
+
+    @media (min-width:  1000px) {
+      #wrapper {
+        width: 900px;
+      }
+    }
+
+    .contact-form label {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #ebfaff;
+      text-shadow: 1px 1px 1px #000;
+    }
+
+    .contact-form input {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      font-family: inherit;
+      border: none;
+      background-color: #edf2ff;
+      border-radius: 9px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.2rem;
+    }
+
+    .textarea-header {
+      margin-bottom: 12px;
+      font-size: 20px;
+      color: #ebfaff;
+      text-shadow: 1px 1px 1px #000;
+    }
+
+    textarea {
+      background-color: #edf2ff;
+      font-family: inherit;
+      font-size: 16px;
+      margin-bottom: 20px;
+      width: 100%;
+      height: 100px;
+      border-radius: 9px;
+      padding: 12px;
+    }
+
+    fieldset {
+      padding: 20px 40px;
+      background-color: #0a6778;
+      margin-bottom: 20px;
+      border:  none;
+      text-shadow: 1px 1px 1px #000;
+    }
+
+    fieldset > legend {
+      font-size: 24px;
+      margin-left: -30px;
+      color: #ebfaff;
+      line-height: 1.5;
+    }
+
+    fieldset > ul {
+      list-style: none;
+    }
+
+    fieldset li {
+      background-color: #0a6778;
+      color: #ebfaff;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+     .fieldset input {
+      width: 20px;
+      padding: 12px;
+      font-size: 20px;
+      font-family: inherit;
+      border: none;
+      background-color: #edf2ff;
+      border-radius: 9px;
+      box-shadow: none;
+      margin-bottom: 0;
+    }
+
+    .button {
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+      transition: all .4s;
+    }
+
+    .button:hover,
+    .button:active  {
+      cursor: pointer;
+      color: #ebfaff;
+      background-color: #3c8e9d;
+    }
+  </style>
+
+
+</head>
+<body>
+<!-- Adam Remillard
+     contact.html
+     INFO1311.WA
+     Olberding
+     11/9/21
+-->
+<div id="wrapper">
+<header class="header">
+  <div>
+    <h1 class="heading-primary">The Bistro Cafe</h1>
+  </div>
+</header>
+
+<nav class="nav">
+  <ul class="nav-list">
+    <li class="nav-list-item"><a href="index.html" class="nav-link">Home</a></li>
+    <li class="nav-list-item"><a href="history.html" class="nav-link">History</a></li>
+    <li class="nav-list-item"><a href="specials.html" class="nav-link">Specials</a></li>
+    <li class="nav-list-item"><a href="#" class="nav-link current-page">Contact Us</a></li>
+  </ul>
+</nav>
+
+<main class="main-contact">
+
+  <h2 class="heading-secondary">Contact Us</h2>
+  <div class="contact-page-container">
+
+  <div class="contact-form-box">
+
+  <form  class="contact-form" action="https://www.mccinfo.net/webresources/cgi-bin/formmail.asp" method="post">
+  <input type="hidden" name="recipient" value="aremillard@mail.mccneb.edu">
+  <input type="hidden" name="subject" value="INFO1311 Final Project Adam Remillard">
+  <!-- <input name="redirect" type="hidden" value="response.html"> -->
+ 
+  <div>
+    <label for="fname">First Name </label>
+    <input type="text" id="fname" name="fname">
+  </div>
+  <div>
+    <label for="lname">Last Name </label>
+    <input type="text" id="lname" name="lname">
+  </div>
+  <div>
+    <label for="email">Email </label>
+    <input type="email" id="email" name="email">
+  </div>
+    <div>
+    <label for="tel">Phone Number </label>
+    <input type="tel" id="tel" name="tel">
+  </div>
+
+  <p class="textarea-header">Message</p>
+  <textarea name="message" id="message" class="message"></textarea>
+
+  <fieldset class="fieldset">
+    <legend>How Did You Hear About Us?</legend>
+    <ul>
+      <li><input type="radio" name="foundus" id="facebook" value="facebook"> Facebook</li>
+      <li><input type="radio" name="foundus" id="instagram" value="instagram"> Instagram</li>
+      <li><input type="radio" name="foundus" id="youtube" value="youtube"> YouTube</li>
+      <li><input type="radio" name="foundus" id="other" value="other"> Other</li>
+    </ul>
+  </fieldset>
+
+  <input type="submit" class="button" value="Submit"> &nbsp;
+  <input type="reset" class="button" value="Clear Form">
+</form>
+
+</div>
+</div>
+</main>
+
+<footer class="footer">
+      <nav class="footer-nav">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><a href="index.html" class="footer-nav-link">Home</a></li>
+          <li class="footer-nav-item"><a href="history.html" class="footer-nav-link">History</a></li>
+          <li class="footer-nav-item"><a href="specials.html" class="footer-nav-link">Specials</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+    <div class="footer-copyright-box">
+      <p class="copyright">Copyright &copy; 2021</p> 
+      <a class="email-link" href="mailto:aremillard@mail.mccneb.edu">Adam Remillard</a>
+    </div>
+
+    <!-- This script tag fixes a Chrome bug when forms are present, the fix stops CSS animations from occuring when the page loads. -->
+    <script> </script>
+</footer>
+</div>
+</body>
+</html>
